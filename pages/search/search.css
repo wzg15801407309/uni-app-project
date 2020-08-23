@@ -1,0 +1,40 @@
+
+.search-icon{
+	width: 40upx;
+	height: 40upx;
+}
+.search-text{
+	font-size: 14px;
+	background-color: #eaeaea;
+	height: 60upx;
+	width: 659upx;
+}
+.search-block{
+	display: flex;
+	padding: 0 20upx 20upx 20upx;
+	z-index:100;
+	/* 固定搜索 */
+	position: fixed;
+	top:100;
+	background-color: #F8F8F8;
+	
+}
+.search-icon-wapper{
+	background-color: #eaeaea;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 10upx ;
+}
+.movie-list{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 100upx 10upx 0upx 10upx;
+}
+.poster{
+	width: 200upx;
+	height: 270upx;
+}
+.movie-wapper{
+	padding: 10upx 20upx;
+}
