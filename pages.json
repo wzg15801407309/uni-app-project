@@ -19,6 +19,20 @@
             "path" : "pages/me/me",
             "style" : {}
         }
+        ,{
+            "path" : "pages/move/move",
+           "style": {
+           	"app-plus":{
+           		"titleNView":{
+					"type":"transparent"
+				}
+           	}
+           }
+        }
+        ,{
+            "path" : "pages/cover/cover",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

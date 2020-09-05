@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/search/search",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/move/move",
+    "pages/cover/cover"
   ],
   "subPackages": [],
   "window": {
@@ -38,6 +40,5 @@
     ]
   },
   "permission": {},
-  "usingComponents": {},
-  "sitemapLocation": "sitemap40.json"
+  "usingComponents": {}
 }
