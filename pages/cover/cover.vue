@@ -21,6 +21,7 @@
 				backgroundColor:'#000000'
 			})
 		},
+		
 	}
 </script>
 

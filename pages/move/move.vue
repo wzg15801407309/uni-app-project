@@ -3,7 +3,8 @@
 		<!-- 详情页面 -->
 		<!-- 视频播放 -->
 		<view class="player">
-			<video 
+			<video
+				id='myVideo'
 				poster="https://img-cdn-qiniu.dcloud.net.cn/uniapp/doc/poster.png"
 				src='https://vfx.mtime.cn/Video/2020/08/25/mp4/200825102345709890_1080.mp4'
 				controls
@@ -112,6 +113,21 @@
 				backgroundColor:'#000000'
 			})
 		},
+		onReady(){
+			// 获取视屏对象
+			this.myVideoObj=uni.createVideoContext("myVideo")
+		},
+		onHide(){
+			// 暂停视屏的播放，当跳转到其他页面的时候
+			// 页面隐藏的时候暂停播放
+			this.myVideoObj.pause();
+		},
+		onShow(){
+			// 页面显示的时候播放
+			if(this.myVideoObj){
+				this.myVideoObj.play();
+			}
+		},
 		methods:{
 			lookeMe(e){
 				var me=this;
@@ -120,6 +136,38 @@
 					current:me.plotpics[index],
 					urls:me.plotpics
 				})
+			}
+		},
+		// 分享到微信聊天界面和微信的朋友圈使用的是uni.share （h5页面不支持）
+		onShareAppMessage(){ // 只支持小程序
+			return {
+				title:'自定义标题',
+				path:'/pages/move/movie?id=123'
+			}
+		},
+		/**
+		 * desc：知道关于分享因为牵扯到第三方的sdk需要我到 appsdk配置  在里面有分享配置 
+		 * （appsdk在app模块配置当中找到了）
+		 */
+		onNavigationBarButtonTap(e) {
+			
+			var index=e.index;
+			if(index==0){//分享
+				uni.share({
+				    provider: "weixin",
+				    scene: "WXSenceTimeline",
+				    type: 0,
+				    href: "http://uniapp.dcloud.io/",// 分享的地址（当前的页面的url地址）
+				    title: "《电影的标题》",
+				    summary: "《电影的标题》",
+				    imageUrl: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png",
+				    success: function (res) {
+				        console.log("success:" + JSON.stringify(res));
+				    },
+				    fail: function (err) {
+				        console.log("fail:" + JSON.stringify(err));
+				    }
+				});
 			}
 		},
 		components:{

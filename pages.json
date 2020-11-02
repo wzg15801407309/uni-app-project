@@ -24,7 +24,8 @@
            "style": {
            	"app-plus":{
            		"titleNView":{
-					"type":"transparent"
+					"type":"transparent",
+					"buttons":[{"type":"share"}]
 				}
            	}
            }

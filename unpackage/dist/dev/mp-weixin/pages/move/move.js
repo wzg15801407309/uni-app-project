@@ -216,6 +216,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
   data: function data() {
     return {
       // 剧照数据
@@ -247,6 +248,21 @@ __webpack_require__.r(__webpack_exports__);
       frontColor: "#ffffff",
       backgroundColor: '#000000' });
 
+  },
+  onReady: function onReady() {
+    // 获取视屏对象
+    this.myVideoObj = uni.createVideoContext("myVideo");
+  },
+  onHide: function onHide() {
+    // 暂停视屏的播放，当跳转到其他页面的时候
+    // 页面隐藏的时候暂停播放
+    this.myVideoObj.pause();
+  },
+  onShow: function onShow() {
+    // 页面显示的时候播放
+    if (this.myVideoObj) {
+      this.myVideoObj.play();
+    }
   } }, _defineProperty(_data$methods$onLoad$, "methods",
 {
   lookeMe: function lookeMe(e) {
@@ -256,8 +272,40 @@ __webpack_require__.r(__webpack_exports__);
       current: me.plotpics[index],
       urls: me.plotpics });
 
-  } }), _defineProperty(_data$methods$onLoad$, "components",
+  } }), _defineProperty(_data$methods$onLoad$, "onShareAppMessage", function onShareAppMessage()
 
+
+{// 只支持小程序
+  return {
+    title: '自定义标题',
+    path: '/pages/move/movie?id=123' };
+
+}), _defineProperty(_data$methods$onLoad$, "onNavigationBarButtonTap", function onNavigationBarButtonTap(
+
+
+
+
+e) {
+
+  var index = e.index;
+  if (index == 0) {//分享
+    uni.share({
+      provider: "weixin",
+      scene: "WXSenceTimeline",
+      type: 0,
+      href: "http://uniapp.dcloud.io/", // 分享的地址（当前的页面的url地址）
+      title: "《电影的标题》",
+      summary: "《电影的标题》",
+      imageUrl: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png",
+      success: function success(res) {
+        console.log("success:" + JSON.stringify(res));
+      },
+      fail: function fail(err) {
+        console.log("fail:" + JSON.stringify(err));
+      } });
+
+  }
+}), _defineProperty(_data$methods$onLoad$, "components",
 {
   trailerStars: trailerStars }), _data$methods$onLoad$);exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
