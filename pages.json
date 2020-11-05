@@ -17,7 +17,17 @@
         }
         ,{
             "path" : "pages/me/me",
-            "style" : {}
+            "style" : {
+				"app-plus":{
+					// 禁用原生导航
+					"titleNView":false
+				},
+				"navigationBarTextStyle":"white",
+				"navigationBarTitleText":"我的",
+				"navigationBarBackgroundColor":"#FFD655"
+				
+				 
+			}
         }
         ,{
             "path" : "pages/move/move",
@@ -33,6 +43,15 @@
         ,{
             "path" : "pages/cover/cover",
             "style" : {}
+        }
+        ,{
+            "path" : "pages/registLogin/registLogin",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
         }
     ],
 	"globalStyle": {
