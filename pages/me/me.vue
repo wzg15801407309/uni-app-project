@@ -32,11 +32,26 @@
 	export default {
 		data() {
 			return {
-				userIsLogin:false
+				userIsLogin:false,
+				userInfo:{}
+			}
+		},
+		onShow() {
+			var me=this;
+			// 获取本地的值
+			var userinfo=uni.getStorageSync('globalUser');
+			if(userinfo){
+				console.log(userinfo,'*********');
+				me.userIsLogin=true;
+				me.userInfo=userinfo;
+			}else{
+				console.log(userinfo,'3333333');
+				me.userIsLogin=false
+				me.userInfo={};
 			}
 		},
 		methods: {
-			
+		
 		}
 	}
 </script>
