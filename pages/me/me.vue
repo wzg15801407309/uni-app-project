@@ -21,7 +21,7 @@
 				</navigator>
 
 			</view>
-			<view v-if="userIsLogin" class="set-wapper">
+			<view v-if="userIsLogin" class="set-wapper" @click="settingsInfo">
 				<image src="../../static/setting.png" class="settings"></image>
 			</view>
 		</view>
@@ -41,17 +41,20 @@
 			// 获取本地的值
 			var userinfo=uni.getStorageSync('globalUser');
 			if(userinfo){
-				console.log(userinfo,'*********');
 				me.userIsLogin=true;
 				me.userInfo=userinfo;
 			}else{
-				console.log(userinfo,'3333333');
 				me.userIsLogin=false
 				me.userInfo={};
 			}
 		},
 		methods: {
-		
+			settingsInfo(){
+				console.log('我点击了设置按钮');
+				uni.navigateTo({
+					url:"../meInfo/meInfo"
+				})
+			}
 		}
 	}
 </script>
