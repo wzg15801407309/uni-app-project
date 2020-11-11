@@ -1,0 +1,83 @@
+/* 页面铺满屏幕 */
+.page-fill{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.info-list{
+	padding: 0rpx 30rpx;
+}
+.info-words{
+	color: #333333;
+	font-size: 16px;
+	width: 25%;
+	line-height: 80rpx;
+}
+.face{
+	width: 80rpx;
+	height: 80rpx;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	margin-right: 5rpx;
+}
+.arror-block{
+	margin-left: 10rpx;
+	line-height: 86rpx;
+}
+.arrow-ico{
+	width: 40rpx;
+	height: 40rpx;
+}
+.item-wapper{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+.face-line-upbottom{
+	margin-top: 20rpx;
+	padding: 20rpx 0;
+}
+.line-top{
+}
+.right-wapper{
+	width: 80%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	        justify-content: flex-end;
+}
+.gray-fields{
+	font-size: 14px;
+	color: darkgray;
+	line-height: 80rpx;
+}
+/* 底部 样式 */
+.footer-wapper{
+	position: fixed;
+	bottom: 0;
+	
+	display: -webkit-box;
+	
+	display: -webkit-flex;
+	
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	width: 100%;
+}
+.footer-words{
+	text-align: center;
+	background-color: white;
+	padding: 20rpx;
+	
+	color: #333333;
+	font-size: 16px;
+}
+

@@ -60,7 +60,7 @@
 			<view class="footer-words" @click="clearStorage">
 				清楚缓存
 			</view>
-			<view class="footer-words" style="margin-top: 10upx;">
+			<view class="footer-words" style="margin-top: 10upx;" @click="loginOut">
 				退出登录
 			</view>
 		</view>
@@ -83,6 +83,15 @@
 					title:'清理缓存成功',
 					mask:false,
 					duration:1500
+				})
+			},
+			loginOut(){
+				console.log('退出登陆');
+				// 正常的流程就是  要请求告知后端要退出。然后清楚数据，跳转到登陆注册页面
+				// 目前我们就清楚缓存就好了
+				uni.removeStorageSync('globalUser');
+				uni.switchTab({
+					url:'../me/me'
 				})
 			}
 		}

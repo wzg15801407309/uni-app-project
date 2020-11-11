@@ -4,7 +4,9 @@
     "pages/search/search",
     "pages/me/me",
     "pages/move/move",
-    "pages/cover/cover"
+    "pages/cover/cover",
+    "pages/registLogin/registLogin",
+    "pages/meInfo/meInfo"
   ],
   "subPackages": [],
   "window": {
@@ -41,5 +43,5 @@
   },
   "permission": {},
   "usingComponents": {},
-  "sitemapLocation": "sitemap24.json"
+  "sitemapLocation": "sitemap46.json"
 }

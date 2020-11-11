@@ -11,8 +11,9 @@
 	/* #ifndef MP */
 	padding: 120upx 30upx 40upx 30upx;
 	/* endif */
-	background-color: #ffd655;
 	background: url(../../static/timg.jpeg) repeat;
+	background-color: #ffd655;
+	
 	
 	display: flex;
 	flex-direction: row;

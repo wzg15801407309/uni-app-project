@@ -14,6 +14,34 @@
 			</view>
 			<button type="primary" form-type="submit" style="margin-top: 60upx; width: 90%;">注册/登陆</button>
 		</form>
+		<!-- 第三方登陆 -->
+		<!-- 如果不是H5平台就可以有第三方登陆 -->
+		<!-- #ifndef H5 -->
+			<view class="third-wapper">
+				<view class="third-line">
+					<view class="single-line">
+						<view class="line"></view>
+					</view>
+					<view class="third-words">第三方登陆</view>
+					<view class="single-line">
+						<view class="line"></view>
+					</view>
+				</view>
+				
+
+				
+				<view class="third-icos-wapper">
+					<!-- #ifdef APP-PLUS -->
+						<image src="../../static/QQ.png" class="third-ico"></image>
+						<image src="../../static/微博.png" class="third-ico"></image>
+						<image src="../../static/微信.png" class="third-ico"></image>
+					<!-- #endif -->
+					<!-- #ifdef MP-WEIXIN -->
+						<button open-type="getUserInfo" @getuserinfo="wxLogin" class="third-btn-ico"></button>
+					<!-- #endif -->
+				</view>
+			</view>
+		<!-- #endif -->
 	</view>
 </template>
 
@@ -25,6 +53,12 @@
 			}
 		},
 		methods: {
+			// 实现在微信小程序端的微信登陆
+			wxLogin(e){
+				console.log(e,'%%%%%%%');
+				// 这个方式可以获取到用户的微信的信息  (通过微信开发能力)
+				var wx_userinfo=e.detail.userInfo;
+			},
 			formSubmit(e){
 				var me=this
 				var password=e.detail.value.password;

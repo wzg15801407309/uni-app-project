@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   trailerStars: function() {
-    return __webpack_require__.e(/*! import() | components/trailerStars/trailerStars */ "components/trailerStars/trailerStars").then(__webpack_require__.bind(null, /*! @/components/trailerStars/trailerStars.vue */ 50))
+    return __webpack_require__.e(/*! import() | components/trailerStars/trailerStars */ "components/trailerStars/trailerStars").then(__webpack_require__.bind(null, /*! @/components/trailerStars/trailerStars.vue */ 68))
   }
 }
 var render = function() {
@@ -140,7 +140,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var trailerStars = function trailerStars() {__webpack_require__.e(/*! require.ensure | components/trailerStars/trailerStars */ "components/trailerStars/trailerStars").then((function () {return resolve(__webpack_require__(/*! ../../components/trailerStars/trailerStars.vue */ 50));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var trailerStars = function trailerStars() {__webpack_require__.e(/*! require.ensure | components/trailerStars/trailerStars */ "components/trailerStars/trailerStars").then((function () {return resolve(__webpack_require__(/*! ../../components/trailerStars/trailerStars.vue */ 68));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
