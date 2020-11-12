@@ -32,9 +32,9 @@
 				
 				<view class="third-icos-wapper">
 					<!-- #ifdef APP-PLUS -->
-						<image src="../../static/QQ.png" class="third-ico"></image>
-						<image src="../../static/微博.png" class="third-ico"></image>
-						<image src="../../static/微信.png" class="third-ico"></image>
+						<image src="../../static/QQ.png"  data-logintype='qq' 		 @click="appOAuthLogin"	class="third-ico"></image>
+						<image src="../../static/微博.png" data-logintype='sinaweibo' @click="appOAuthLogin"   class="third-ico"></image>
+						<image src="../../static/微信.png" data-logintype='weixin'    @click="appOAuthLogin"  class="third-ico"></image>
 					<!-- #endif -->
 					<!-- #ifdef MP-WEIXIN -->
 						<button open-type="getUserInfo" @getuserinfo="wxLogin" class="third-btn-ico"></button>
@@ -53,11 +53,35 @@
 			}
 		},
 		methods: {
+			// app端第三方登陆的实现
+			appOAuthLogin(e){
+				console.log(e,'appOAuthLogin');
+				var me=this;
+				// e.currentTarget.logintype 的logintype要小写
+				var logintype=e.currentTarget.logintype;
+				// 第三登陆  的登陆授权
+				// 这里还要在appsdk上对要使用的第三方进行授权。像分享朋友圈一样的方式
+				uni.login({
+					provider:logintype,
+					success(res) {
+						console.log(res);
+						// 就可以拿到code，不同的第三方的的code
+					}
+				})
+			},
 			// 实现在微信小程序端的微信登陆
 			wxLogin(e){
 				console.log(e,'%%%%%%%');
 				// 这个方式可以获取到用户的微信的信息  (通过微信开发能力)
 				var wx_userinfo=e.detail.userInfo;
+				// 这个方式可以拿到code，在把code上传到服务器，去拿微信的openid
+				uni.login({
+					provider:'weixin',
+					success(res) {
+						console.log(res);
+						// 就可以拿到code   在把code传给服务器 （这里的的意思是服务器给要给微信建立链接）
+					}
+				})
 			},
 			formSubmit(e){
 				var me=this

@@ -69,7 +69,7 @@
 	height: 60upx;
 }
 .third-btn-ico{
-	background-image: url(../../static/微信.png);
+	background-image:url(../../static/微信.png);
 	width: 60upx;
 	height: 60upx;
 	background-color: white;
