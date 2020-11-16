@@ -63,6 +63,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/meFace/meFace",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
