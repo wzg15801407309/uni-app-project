@@ -2,7 +2,7 @@
 	<view class="page page-fill">
 		<view class="page-block info-list">
 			<!-- 头像 -->
-			<view class="item-wapper face-line-upbottom">
+			<view class="item-wapper face-line-upbottom" @click="operator">
 				<view class="info-words">头像</view>
 				
 				<view class="right-wapper">
@@ -75,6 +75,25 @@
 			}
 		},
 		methods: {
+			operator(){
+				uni.showActionSheet({
+					itemList:['查看头像','从相册选择上传'],
+					success(res){
+						// 这里犯了一个错误就是把tapindex写错了，导致不能浏览
+						var index=res.tapIndex;
+						if(index==0){
+							var arr=[];
+							arr.push('../../static/default-header.png');
+							uni.previewImage({
+								urls:arr,
+								current:arr[0]
+							})
+						}else if(index==1){
+							//手机选择
+						}
+					}
+				})
+			},
 			clearStorage(){
 				// 清楚所有的缓存
 				// 也可以清楚某一个缓存。使用removeStorage() 加key 就可以清楚某一哥
