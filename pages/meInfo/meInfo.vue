@@ -89,7 +89,19 @@
 								current:arr[0]
 							})
 						}else if(index==1){
-							//手机选择
+							uni.chooseImage({
+								count:1,
+								sizeType:['compressed'],
+								sourceType:['album'],
+								success(res){
+									// 上传文件的零时路径
+									var tempfilepath=res.tempFilePaths[0];
+									uni.navigateTo({
+										url:"../meFace/meFace?tempfilepath="+tempfilepath
+									})
+									
+								}
+							})
 						}
 					}
 				})
