@@ -16,7 +16,7 @@
 				<view class="line"></view>
 			</view>
 			<!-- 呢称 -->
-			<view class="item-wapper face-line-upbottom">
+			<view class="item-wapper face-line-upbottom" @click="modifyNickChange">
 				<view class="info-words">呢称</view>
 				
 				<view class="right-wapper">
@@ -30,7 +30,7 @@
 				<view class="line"></view>
 			</view>
 			<!-- 生日 -->
-			<view class="item-wapper face-line-upbottom">
+			<view class="item-wapper face-line-upbottom" @click="modifyBirthChange">
 				<view class="info-words">生日</view>
 				
 				<view class="right-wapper">
@@ -75,6 +75,17 @@
 			}
 		},
 		methods: {
+			// 修改nickname
+			modifyNickChange(){
+				uni.navigateTo({
+					url:'../meNick/meNick'
+				})
+			},
+			modifyBirthChange(){
+				uni.navigateTo({
+					url:'../meBirthday/meBirthday'
+				})
+			},
 			operator(){
 				uni.showActionSheet({
 					itemList:['查看头像','从相册选择上传'],

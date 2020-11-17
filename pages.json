@@ -66,6 +66,25 @@
               "navigationBarBackgroundColor":"#000000"
             }
         }
+        ,{
+            "path" : "pages/meNick/meNick",
+            "style" :                                                                                    
+            {
+                "navigationBarTextStyle":"white",
+                "navigationBarTitleText":"修改呢称",
+                "navigationBarBackgroundColor":"#FFD655"
+            }
+            
+        },{
+            "path" : "pages/meBirthday/meBirthday",
+            "style" :                                                                                    
+            {
+				"navigationBarTextStyle":"white",
+                "navigationBarTitleText":"修改日期",
+                "navigationBarBackgroundColor":"#FFD655"
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
