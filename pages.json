@@ -85,6 +85,16 @@
             }
             
         }
+        ,{
+            "path" : "pages/sex/sex",
+            "style" :                                                                                    
+            {
+				"navigationBarTextStyle":"white",
+                "navigationBarTitleText":"修改性别",
+                "navigationBarBackgroundColor":"#FFD655"
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

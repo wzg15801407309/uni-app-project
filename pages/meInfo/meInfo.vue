@@ -44,7 +44,7 @@
 				<view class="line"></view>
 			</view>
 			<!-- 性别 -->
-			<view class="item-wapper face-line-upbottom">
+			<view class="item-wapper face-line-upbottom" @click="modifySexChange">
 				<view class="info-words">性别</view>
 				
 				<view class="right-wapper">
@@ -81,9 +81,16 @@
 					url:'../meNick/meNick'
 				})
 			},
+			// 修改 生日日期
 			modifyBirthChange(){
 				uni.navigateTo({
 					url:'../meBirthday/meBirthday'
+				})
+			},
+			// 性别
+			modifySexChange(){
+				uni.navigateTo({
+					url:'../sex/sex'
 				})
 			},
 			operator(){
